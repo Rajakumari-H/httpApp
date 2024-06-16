@@ -1,0 +1,9 @@
+.container {
+    text-align: center;
+}
+.cont2 {
+    float: left;
+}
+.form-select{
+    width: auto !important;
+}

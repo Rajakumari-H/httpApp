@@ -1,0 +1,26 @@
+
+
+<div class="container">
+    <h1>weather of Http App</h1> <br><br>
+    Search The City: <input type="text" name="" placeholder="Search" [(ngModel)]="locationName"><br><br><br>
+    <button class="btn btn-primary" (click)="searchWeather()">Search</button> <br><br>
+
+</div> 
+
+<div *ngIf="isShow" class="cont1">
+    City Name:  <b>{{data.name}}</b> <br>
+    Country: <b>{{data.sys.country}}</b> <br>
+    Description: <b>{{data.weather[0].description}} </b>
+    <ul>
+        <li>Temp: {{data.main.temp}}</li>
+        <li>Humidity: {{data.main.humidity}}</li>
+    </ul>
+
+   </div>
+
+   <div *ngIf="showMsg" class="cont2">
+    {{msgNot}}
+   </div> <br><br>
+   <app-loader [loading]="loader"></app-loader>
+
+
